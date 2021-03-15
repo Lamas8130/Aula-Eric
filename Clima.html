@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+</head>
+
+<p>Selecione o Clima de hoje !</p> 
+
+<ul>
+    <li> 1 - Ensolarado </li>
+    <li> 2 - Chuvoso </li>
+    <li> 3 - Nublado </li>
+    <li> 4 - Nevoso </li>
+
+</ul>
+<form id="formulario">
+  <input id="clima" type="number" placeholder="Selecione o clima">
+<button>Visualizar</button>
+
+</form>
+<div id ="visualizar"></div>
+
+<body>
+       <script> 
+function funcao(event){
+event.preventDefault()
+let climaex = parseFloat(clima.value)
+if (climaex === 1) {
+visualizar.innerHTML = 'Hoje está bom e ensolarado lá fora. Use shorts! Vá à praia ou ao parque e tome um sorvete.';
+} else if (climaex === 2) {
+visualizar.innerHTML = 'A chuva está caindo lá fora; pegue uma capa de chuva e um guarda-chuva, e não fique fora por muito tempo';
+} else if (climaex === 3) {
+visualizar.innerHTML = 'A neve está caindo - está congelando! Melhor ficar em casa com uma xícara de chocolate quente ou construir um boneco de neve.';
+} else if (climaex === 4) {
+visualizar.textContent = 'Não está chovendo, mas o céu está cinza e sombrio; pode girar a qualquer minuto, então leve uma capa de chuva para o caso.';
+} 
+else if(climaex !==1 && climaex !==2 && climaex !==3 && climaex !==4){
+visualizar.innerHTML = `Clima informado não existe`;
+}
+else {
+para.textContent = '';
+}
+}
+formulario.addEventListener('submit', funcao)
+        </script>
+</body>
+</html>
